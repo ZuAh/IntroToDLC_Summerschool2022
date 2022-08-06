@@ -1,0 +1,7 @@
+1) open anaconda prompt
+2) conda activate DEEPLABCUT
+3) ipython
+4) import deeplabcut 
+5) deeplabcut.launch_dlc()
+
+
