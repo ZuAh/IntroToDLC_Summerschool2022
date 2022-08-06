@@ -1,0 +1,77 @@
+# Project definitions (do not edit)
+Task: ExR_foraging_Luki-082021
+scorer: ZAh
+date: Aug8
+
+# Project path (change when moving around)
+project_path: C:\Users\Zurna\Desktop\11_DLCWorkshopAtSummerschool\DLC_structure
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\Zurna\Desktop\11_DLCWorkshopAtSummerschool\DLC_structure\videos\luk_cam32.mp4:
+    crop: 0, 1024, 0, 768
+  C:\Users\Zurna\Desktop\11_DLCWorkshopAtSummerschool\DLC_structure\videos\luk_cam34.mp4:
+    crop: 0, 1024, 0, 768
+  C:\Users\Zurna\Desktop\11_DLCWorkshopAtSummerschool\DLC_structure\videos\luk_cam39.mp4:
+    crop: 0, 1024, 0, 768
+  C:\Users\Zurna\Desktop\11_DLCWorkshopAtSummerschool\DLC_structure\videos\luk_cam69.mp4:
+    crop: 0, 1024, 0, 768
+
+    
+bodyparts:
+- L_wrist
+- L_elbow
+- L_shoulder
+- R_wrist
+- R_elbow
+- R_shoulder
+- L_ankle
+- L_knee
+- R_ankle
+- R_knee
+- E_tail
+- S_tail
+- neck
+- head
+- L_ear
+- R_ear
+- L_eye
+- R_eye
+- nose
+
+start: 0
+stop: 1
+numframes2pick: 10
+
+# Plotting configuration
+skeleton:
+
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 4
+alphavalue: 0.7
+colormap: jet
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+resnet:
+snapshotindex: -1
+batch_size: 8
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+default_net_type: resnet_50
+default_augmenter: default
